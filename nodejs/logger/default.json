@@ -1,0 +1,20 @@
+{
+    "appenders": [
+        { "type": "console" },
+		{
+            "type": "dateFile",
+            "filename": "logs/lejr.log",
+            "pattern": "-yyyy-MM-dd-hh",
+            "category": "lejr"
+        },
+        {
+            "type": "logLevelFilter",
+            "level": "ERROR",
+            "appender": {
+                "type": "dateFile",
+                "filename": "logs/errors.log",
+                "pattern": "-yyyy-MM-dd"
+            }
+        }
+    ]
+}
